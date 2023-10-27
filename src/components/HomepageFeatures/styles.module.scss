@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.leftView {
+  flex-grow: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerView {
+  
+}
+
+.rightView {
+  flex-grow: 5;
+  flex: auto;
+}
+
+.headerText {
+  color: #09223B;
+  font-size: 36px;
+  font-weight: 800;
+  font-family: Inter-Bold;
+}
+
+html[data-theme='dark'] .headerText {
+  color: white;
+}
+
+.normalText {
+  font-size: 20px;
+}
+
+.learnMore {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 133px;
+  height: 40px;
+  background: #0F8461;
+  border-radius: 4px;
+  color: white;
+  border-color: transparent;
+  font-size: 16px;
+  cursor:pointer;
+}

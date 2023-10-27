@@ -1,0 +1,266 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@import "modules/notes.css";
+@import "modules/custom.css";
+@import "modules/ordered_list_unordered_list_step_substep_choice.css";
+@import "modules/cause_condition_context_example_postreq_prereq_remedy_result_steps_stepsection.css";
+@import "modules/choices_info_stepresult_stepexample_solution_substeps_troublesolution.css";
+@import "modules/choices_steps_substeps_numbering.css";
+@import "modules/definition_list.css";
+@import "modules/hide_empty_elements.css";
+@import "modules/related_links.css";
+
+@font-face {
+  font-family: FontAwesome;
+  src: url("@site/static/FontAwesome.otf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Black;
+  src: url("@site/static/Inter-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url("@site/static/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-ExtraBold;
+  src: url("@site/static/Inter-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-ExtraLight;
+  src: url("@site/static/Inter-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Light;
+  src: url("@site/static/Inter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  src: url("@site/static/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url("@site/static/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url("@site/static/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Thin;
+  src: url("@site/static/Inter-Thin.ttf") format("truetype");
+}
+
+:root {
+  --ifm-color-primary: #5959EB;
+  --ifm-color-primary-dark: #5959EB;
+  --ifm-color-primary-darker: #5959EB;
+  --ifm-color-primary-darkest: #5959EB;
+  --ifm-color-primary-light: #5959EB;
+  --ifm-color-primary-lighter: #5959EB;
+  --ifm-color-primary-lightest: #5959EB;
+  --ifm-code-font-size: 95%;
+  --ifm-menu-color: #243B53;
+  --ifm-font-family-base: Inter-Regular;
+  --aa-primary-color-rgb: #486581 !important;
+  --ifm-footer-link-hover-color: #5959EB;
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-link-hover-color: #5959EB;
+  --ifm-link-color: #5959EB;
+  --aa-scrollbar-track-background-color-rgb: 255, 255, 255 !important;
+  --aa-scrollbar-thumb-background-color-rgb: 127, 127, 127 !important;
+  .menu__link--sublist-caret:after {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
+  }
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme='dark'] {
+  --ifm-color-primary: #5959EB;
+  --ifm-color-primary-dark: #5959EB;
+  --ifm-color-primary-darker: #5959EB;
+  --ifm-color-primary-darkest: #5959EB;
+  --ifm-color-primary-light: #5959EB;
+  --ifm-color-primary-lighter: #5959EB;
+  --ifm-color-primary-lightest: #5959EB;
+  --ifm-menu-color: white;
+  --ifm-footer-link-hover-color: #5959EB;
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-link-hover-color: #5959EB;
+  --ifm-link-color: #5959EB;
+  // --ifm-font-family-base: Inter-Medium, Inter-Regular, Inter-Black, Inter-Bold, Inter-ExtraBold, Inter-ExtraLight, Inter-Light, Inter-SemiBold, Inter-Thin;
+  --aa-primary-color-rgb: #F5F6F7;
+  --aa-scrollbar-track-background-color-rgb: 68, 70, 75 !important;
+  --aa-scrollbar-thumb-background-color-rgb: 162, 163, 165 !important;
+  .menu__link--sublist-caret:after {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
+  }
+}
+
+html[data-theme='dark'] .aa-ClearButton svg {
+  color: #F5F6F7 !important;
+  opacity: 0.7;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bar-items-download {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 28px;
+  width: 133px;
+  height: 40px;
+  background: #0F8461;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: white;
+  margin-right: 16px;
+  --ifm-navbar-link-hover-color: white;
+}
+
+.bar-items-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+// rating
+.rating-msg {
+  display: none;
+}
+
+.rating-icons {
+
+  * {
+    color: #243B53 !important;
+    background: unset !important;
+    display: inline-block !important;
+    float: none !important;
+    border: 1px solid #486581 !important;
+    border-radius: 28px !important;
+    padding-left: 17px !important;
+    padding-top: 10px !important;
+    width: 90px !important;
+    height: 40px !important;
+    margin-left: 10px !important;
+  }
+
+  &:hover {
+    opacity: .8;
+    .rating-nero-value {
+      font-weight: normal !important;
+    }
+  }
+
+  .rating-nero-value {
+    padding-left: 0 !important;
+    padding-right: 8px !important;
+    font-weight: normal !important;
+    display: none !important;
+  }
+
+  .rating-nero-icon {
+
+    &::before {
+      font-family: FontAwesome;
+    }
+
+    &#PDRTJS_8726954_nero_1::after {
+      font-size: 14px;
+      margin-left: 5px;
+      font-weight: 600;
+      content: 'Yes';
+    }
+
+    &#PDRTJS_8726954_nero_2::after {
+      font-size: 14px;
+      margin-left: 5px;
+      font-weight: 600;
+      content: 'No';
+    }
+
+    &#PDRTJS_8726954_nero_1::before {
+      content: "\f164";
+    }
+
+    &#PDRTJS_8726954_nero_2::before {
+      content: "\f165";
+    }
+
+    &#PDRTJS_8726954_nero_1:hover {
+      background: #E5F6FF !important;
+      border: 1px solid #0077ED !important;
+      color: #0077ED !important;
+    }
+
+    &#PDRTJS_8726954_nero_1:active {
+      background: #0077ED !important;
+      border: 1px solid #0077ED !important;
+      color: white !important;
+    }
+
+    &#PDRTJS_8726954_nero_2:hover {
+      background: #FDF3E8 !important;
+      border: 1px solid #F0821E !important;
+      color: #F0821E !important;
+    }
+
+    &#PDRTJS_8726954_nero_2:active {
+      background: #F0821E !important;
+      border: 1px solid #F0821E !important;
+      color: white !important;
+    }
+  }
+}
+
+html[data-theme='dark'] .rating-icons {
+
+  * {
+    color: white !important;
+    border: 1px solid white !important;
+  }
+
+}
+
+.dt * {
+  color: black;
+}
+
+html[data-theme='dark'] .dt * {
+  color: white;
+}
+
+.aa-GradientBottom {
+  height: 0px !important;
+}
+
+.version-items-text {
+  font-family: Inter-Medium;
+}

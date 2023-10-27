@@ -1,0 +1,310 @@
+/* Import icons/font. */
+@font-face {
+  font-family: icomoon;
+  src: url("@site/static/icomoon.ttf") format("truetype");
+}
+/* Style the font containing icons preceding note captions. */
+
+.note__title {
+  visibility: hidden;
+	position: relative;
+}
+
+.note__title::before {
+  visibility: visible;
+  display: inline-block;
+  font-family: icomoon;
+  font-size: 13px;
+  padding-right: 3.5px;
+  margin-right: 3px;
+}
+.note_note > .note__title::before {
+  content: "\e902";
+  color: #0083FF;
+}
+.note_tip > .note__title::before {
+  content: "\e902";
+  color: #0083FF;
+}
+.note_fastpath > .note__title::before {
+  content: "\e902";
+  color: #6BB545;
+}
+.note_trouble > .note__title::before {
+  content: "\e901";
+  color: #6BB545;
+}
+.note_important > .note__title::before {
+  content: "\e901";
+  color: #6BB545;
+}
+.note_remember > .note__title::before {
+  content: "\e903";
+  color: #F19035;
+}
+.note_restriction > .note__title::before {
+  content: "\e903";
+  color: #F19035;
+}
+.note_attention > .note__title::before {
+  content: "\e900";
+  color: #D92D20;
+}
+.note_caution > .note__title::before {
+  content: "\e903";
+  color: #F19035;
+}
+.note_warning > .note__title::before {
+  content: "\e903";
+  color: #F19035;
+}
+.note_danger > .note__title::before {
+  content: "\e900";
+  color: #D92D20;
+}
+
+/* All notes */
+div.note {
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial;
+  margin-bottom: 1em;
+  border-color: var(--ifm-alert-border-color);
+  border-width: var(--ifm-alert-border-width);
+  border-radius: var(--ifm-alert-border-radius);
+  padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+  background: #112e4f;
+  color: #000000;
+  border: none;
+  font-size: 1rem;
+}
+div.note > span.note__title {
+  display: inline-block;
+  color: #000000;
+  font-weight: bold;
+  /*font-size: 0.88rem;*/
+  /*margin-bottom: 0.50rem;*/
+  /* text-transform: uppercase; */
+}
+
+/* Background colors */
+div.note.note_note {
+  background: #E8E5FF;
+  border-left: 4px solid #5959EB;
+}
+
+html[data-theme='dark'] div.note.note_note {
+  background: #1C344E;
+}
+
+div.note.note_tip {
+  background: #E8E5FF;
+  border-left: 4px solid #5959EB;
+}
+
+html[data-theme='dark'] div.note.note_tip {
+  background: #1C344E;
+}
+
+div.note.note_trouble {
+  background: #E8FBF0;
+  border-left: 4px solid #6BB545;
+}
+
+html[data-theme='dark'] div.note.note_trouble {
+  background: #2F481D;
+}
+
+div.note.note_fastpath {
+  background: #E8FBF0;
+  border-left: 4px solid #6BB545;
+}
+
+html[data-theme='dark'] div.note.note_fastpath {
+  background: #2F481D;
+}
+
+div.note.note_important {
+  background: #E8FBF0;
+  border-left: 4px solid #6BB545;
+}
+
+html[data-theme='dark'] div.note.note_important {
+  background: #2F481D;
+}
+
+div.note.note_remember {
+  background: #FDF8E3;
+  border-left: 4px solid #F19035;
+}
+
+html[data-theme='dark'] div.note.note_remember {
+  background: #55421D;
+}
+
+div.note.note_restriction {
+  background: #FDF8E3;
+  border-left: 4px solid #F19035;
+}
+
+html[data-theme='dark'] div.note.note_restriction {
+  background: #55421D;
+}
+
+div.note.note_attention {
+  background: #FCECE7;
+  border-left: 4px solid #D92D20;
+}
+
+html[data-theme='dark'] div.note.note_attention {
+  background: #511D1E;
+}
+
+div.note.note_caution {
+  background: #FDF8E3;
+  border-left: 4px solid #F19035;
+}
+
+html[data-theme='dark'] div.note.note_caution {
+  background: #55421D;
+}
+
+div.note.note_warning {
+  background: #FDF8E3;
+  border-left: 4px solid #F19035;
+}
+
+html[data-theme='dark'] div.note.note_warning {
+  background: #55421D;
+}
+
+div.note.note_danger {
+  background: #FCECE7;
+  border-left: 4px solid #D92D20;
+}
+
+html[data-theme='dark'] div.note.note_danger {
+  background: #511D1E;
+}
+
+/* Fix issues with colors of note children */
+div.note,
+div.note * {
+  color: #000000;
+}
+
+html[data-theme='dark'] div.note * {
+  color: white;
+}
+
+div.note a {
+  color: #5959EB;
+}
+
+html[data-theme='dark'] div.note a {
+  color: #5959EB;
+}
+
+/* Fix issues with background colors */
+div.note code.ph.codeph,
+div.note div.pre.codeblock {
+  color: #000000;
+}
+
+html[data-theme='dark'] div.note code.ph.codeph, div.note div.pre.codeblock {
+  color: white;
+}
+
+.note_fastpath > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_trouble > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_important > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Requirements";
+}
+
+.note_note > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notes";
+}
+
+.note_tip > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Tips";
+}
+
+.note_remember > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_attention > .note__title::after {
+	visibility: visible;
+  position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Known Issues";
+  width: 120px;
+}
+
+.note_restriction > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_caution > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notices";
+}
+
+.note_warning > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Notice";
+}
+
+.note_danger > .note__title::after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	content: "Known Issues";
+}
