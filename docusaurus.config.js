@@ -317,7 +317,7 @@ const config = {
   plugins: [
     'docusaurus-plugin-sass',
     'docusaurus-plugin-image-zoom',
-    'plugin-auto-redirect',
+    // 'plugin-auto-redirect',
     [
       'docusaurus-plugin-dotenv',
       {
