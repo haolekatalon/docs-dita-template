@@ -34,13 +34,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs',
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: 'current',
-            },
-          },
+          // routeBasePath: '/docs',
+          // lastVersion: 'current',
+          // versions: {
+          //   current: {
+          //     label: 'current',
+          //   },
+          // },
         },
         blog: false,
         theme: {
@@ -112,28 +112,28 @@ const config = {
           },
         ],
       },
-      algolia: {
-        appId: process.env.APPLICATION_ID,
-        indexName: process.env.INDEX_NAME,
-        apiKey: process.env.API_KEY,
+      // algolia: {
+      //   appId: process.env.APPLICATION_ID,
+      //   indexName: process.env.INDEX_NAME,
+      //   apiKey: process.env.API_KEY,
   
-        // Optional: see doc section bellow
-        contextualSearch: true,
+      //   // Optional: see doc section bellow
+      //   contextualSearch: true,
 
-        // Optional: Algolia search parameters
-        searchParameters: {
-            hitsPerPage: 20,
-            clickAnalytics: true,
-            analytics: true,
-            advancedSyntax: true,
-        },
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {
+      //       hitsPerPage: 20,
+      //       clickAnalytics: true,
+      //       analytics: true,
+      //       advancedSyntax: true,
+      //   },
 
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
   
-        //... other Algolia params
-        selector: 'div#',
-      },
+      //   //... other Algolia params
+      //   selector: 'div#',
+      // },
       footer: {
         style: 'light',
         links: [
@@ -318,37 +318,37 @@ const config = {
     'docusaurus-plugin-sass',
     'docusaurus-plugin-image-zoom',
     // 'plugin-auto-redirect',
-    [
-      'docusaurus-plugin-dotenv',
-      {
-          path: "./.env", 
-          systemvars: true, 
-      }
-    ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      // highlight-start
-      {
-        redirects: [
-            {
-                "to": "/javadoc",
-                "from": [
-                    "/javadoc/index.html"
-                ]
-            },
-            {
-                "to": "/docs",
-                "from": [
-                    "/",
-                    "/katalon-studio/docs/index.html",
-                    "/index.html",
-                    "/display/KD/"
-                ]
-            } 
-        ]
-    },
-  // highlight-end
-  ],
+    // [
+    //   'docusaurus-plugin-dotenv',
+    //   {
+    //       path: "./.env", 
+    //       systemvars: true, 
+    //   }
+    // ],
+  //   [
+  //     '@docusaurus/plugin-client-redirects',
+  //     // highlight-start
+  //     {
+  //       redirects: [
+  //           {
+  //               "to": "/javadoc",
+  //               "from": [
+  //                   "/javadoc/index.html"
+  //               ]
+  //           },
+  //           {
+  //               "to": "/docs",
+  //               "from": [
+  //                   "/",
+  //                   "/katalon-studio/docs/index.html",
+  //                   "/index.html",
+  //                   "/display/KD/"
+  //               ]
+  //           } 
+  //       ]
+  //   },
+  // // highlight-end
+  // ],
 ],
 };
 
